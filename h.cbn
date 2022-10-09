@@ -1,0 +1,6 @@
+package Simple api;
+
+fn Main() -> i32 {
+    Print("hello world");
+    return 0;
+}

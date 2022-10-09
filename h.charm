@@ -1,0 +1,7 @@
+import lib.Out;
+
+module h {
+    export proc ~start() {
+        Out.vdu.str("hello world").nl();
+    }
+}
