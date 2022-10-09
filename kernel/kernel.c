@@ -1,14 +1,15 @@
 //idk why tf i did this
 
 typedef unsigned char u8;
+typedef unsigned char u16;
 
-static inline unsigned char inb(unsigned short port) {
+static inline u8 inb(u16 port) {
     unsigned char result;
     asm volatile("inb %w1, %b0" : "=a" (result) : "Nd" (port));
     return result;
 }
 
-static inline void outb(unsigned short port, unsigned char data) {
+static inline void outb(u16 port, u8 data) {
     asm volatile("outb %b0, %w1" :: "a"(data), "Nd" (port));
 }
 
